@@ -12,6 +12,9 @@
 ## Ensure you have listerner  - with meterpreter use getsytem to elevate :)
 ##
 ## bypassuac.exe found here: https://www.trustedsec.com/downloads/tools-download/
+## when specifiying path to bypassuac.exe choose appropriate path for 32 or 64 bit
+## 64 bit - bypassuac/uac/bypassuac.exe
+## 32 bit - bypassuac/source code/Win32/Release/Win7Elevate32.exe
 
 SERVICE='apache2'
 if ps ax | grep -v grep | grep $SERVICE > /dev/null
